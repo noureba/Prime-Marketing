@@ -1,11 +1,9 @@
 const path = require("path");
-const htmlWebpackPlugin = require("html-webpack-plugin");
-
-// this for production
-const miniCssExtractPlugin = require("mini-css-extract-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
-  mode: "development",
+  mode: process.env.NODE_ENV || "development",
   entry: {
     index: "./src/index.js",
   },
@@ -14,20 +12,44 @@ module.exports = {
     filename: "[name].[contenthash].js",
     clean: true,
   },
+
+  devtool: "source-map",
+
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: "./src/index.html",
+      filename: "index.html",
+      inject: "body",
+    }),
+    new MiniCssExtractPlugin({
+      filename: "assets/css/[name].[contenthash].css",
+    }),
+  ],
+
   module: {
     rules: [
       {
         test: /\.css$/,
-        use: ["style-loader", "css-loader"],
+        use: [
+          process.env.NODE_ENV === "production"
+            ? MiniCssExtractPlugin.loader
+            : "style-loader",
+          "css-loader",
+        ],
+      },
+      {
+        test: /\.(png|jpe?g|gif|svg)$/i,
+        type: "asset/resource",
+        generator: {
+          filename: "assets/images/[name].[contenthash][ext]",
+        },
+      },
+      {
+        test: /\.html$/,
+        use: ["html-loader"],
       },
     ],
   },
-  plugins: [
-    new htmlWebpackPlugin({
-      template: "./src/index.html",
-      filename: "index.html",
-    }),
-  ],
 
   devServer: {
     static: path.resolve(__dirname, "dist"),

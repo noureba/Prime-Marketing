@@ -2,7 +2,7 @@
   "name": "prime-marketing",
   "version": "1.0.0",
   "main": "index.js",
-  "type": "module",
+  "type": "commonjs",
   "scripts": {
     "lint": "eslint",
     "start": "webpack serve",
@@ -15,7 +15,9 @@
     "@eslint/js": "^9.23.0",
     "css-loader": "^7.1.2",
     "eslint": "^9.23.0",
+    "file-loader": "^6.2.0",
     "globals": "^16.0.0",
+    "html-loader": "^5.1.0",
     "html-webpack-plugin": "^5.6.3",
     "jest": "^29.7.0",
     "mini-css-extract-plugin": "^2.9.2",

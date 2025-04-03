@@ -1,5 +1,1 @@
-import "./styles/globals.css"
-
-alert("js file work")
-
-console.log("hello")
+require("./styles/globals.css");

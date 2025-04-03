@@ -6,7 +6,7 @@ export default defineConfig([
   { files: ["**/*.{js,mjs,cjs}"] },
   {
     files: ["**/*.{js,mjs,cjs}"],
-    languageOptions: { globals: globals.browser },
+    languageOptions: { globals: { ...globals.browser, ...globals.node } },
   },
   {
     files: ["**/*.{js,mjs,cjs}"],
@@ -15,6 +15,7 @@ export default defineConfig([
     rules: {
       "no-unused-vars": "warn",
       "no-console": "warn",
+      "semi": ["error", "always"],
     },
   },
 ]);
