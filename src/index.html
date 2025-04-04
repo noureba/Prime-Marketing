@@ -8,19 +8,210 @@
   </head>
   <body>
     <header>
+      <a href="#home">
+        <img src="./assets/images/logo-header.png" alt="logo" width="200px" />
+      </a>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#clients">Clients</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <button>Let's talk</button>
+      <button class="barMenu" aria-label="Toggle menu">
+        <img src="./assets/icons/menu.png" alt="bar menu" width="30px" />
+      </button>
+    </header>
+
+    <section class="heroSection" id="home">
       <div>
-        <img src="./assets/images/logo-header.png" alt="logo" />
+        <p>Best Business Platform - World Record 2025</p>
+        <h3>Reach Your Business Goals in Record Time</h3>
+        <p>
+          Support small business and join the nationwide movement to encourage
+          commercial support for the millions of minority owned businesses
+          helping world economy.
+        </p>
+        <div>
+          <button>Get Started</button>
+          <button>
+            <span>Watch Video</span>
+            <img
+              src="./assets/icons/play-button.png"
+              alt="play button"
+              width="20px"
+            />
+          </button>
+        </div>
       </div>
+      <div>
+        <img src="./assets/images/hello.png" alt="hero image" width="100%" />
+      </div>
+    </section>
+
+    <section class="brands">
+      <img src="./assets/images/microsoft.png" alt="microsoft" />
+      <img src="./assets/images/prudential.png" alt="prudential" />
+      <img src="./assets/images/slack.png" alt="slack" />
+      <img src="./assets/images/zoover.png" alt="zoover" />
+    </section>
+
+    <section class="services" id="services">
+      <div>
+        <p>SERVICES</p>
+        <h3>Our Capabilities</h3>
+        <p>
+          We will bring the breathe of our experience and industry knowledge to
+          help you succeed
+        </p>
+      </div>
+      <div>
+        <div>
+          <img src="./assets/icons/card.png" alt="card" width="50px" />
+          <h3>Fund Raising</h3>
+          <p>
+            Bring to the table survival strategies to ensure proactive
+            domination
+          </p>
+        </div>
+        <div>
+          <img src="./assets/icons/cash.png" alt="cash" width="50px" />
+          <h3>Cash Flow</h3>
+          <p>Grow the holistic world view of disruptive innovation workspace</p>
+        </div>
+        <div>
+          <img src="./assets/icons/market.png" alt="market" width="50px" />
+          <h3>Market Forces</h3>
+          <p>
+            Leverage agile framework to provide a robust high level synopsis
+            overviews
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="whyUs" id="about">
+      <div>
+        <img src="./assets/images/about.png" alt="about" width="100%" />
+      </div>
+      <div>
+        <p>WHY US</p>
+        <h3>Take on any Challenge of the Digital World</h3>
+        <p>
+          <img
+            src="./assets/icons/checked.png"
+            alt="checked icone"
+            width="30px"
+          />
+          <span>Corporate Financial Advisory</span>
+        </p>
+        <p>
+          <img
+            src="./assets/icons/checked.png"
+            alt="checked icone"
+            width="30px"
+          />
+          <span>Development of Financial Models</span>
+        </p>
+        <p>
+          <img
+            src="./assets/icons/checked.png"
+            alt="checked icone"
+            width="30px"
+          />
+          <span>Deal Structuring</span>
+        </p>
+        <button>Get started</button>
+      </div>
+    </section>
+
+    <section class="reviews" id="clients">
+      <div>
+        <p>TESTIMONIAL</p>
+        <h3>What Our Customer’s Say</h3>
+      </div>
+      <div>
+        <div>
+          <img src="./assets/icons/quotes.png" alt="quotes" width="30px" />
+          <p>
+            I really like the team for example, a relationship-focused
+            performance expectation might be that the employee sustain collegial
+            working relationships with her peers, subordinates and customers.
+          </p>
+          <div>
+            <img src="./assets/images/gloria.png" alt="gloria" width="50px" />
+            <h3>Gloria Jessica</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div>
+        <img src="./assets/images/contact.png" alt="contact" width="100%" />
+      </div>
+      <form action="">
+        <div>
+          <p>CONTACT US</p>
+          <h3>Let’s Collaborate Now!</h3>
+        </div>
+        <div>
+          <label for="fullName">Full Name</label>
+          <input
+            type="text"
+            name="fullName"
+            id="fullName"
+            placeholder="input your name"
+            required
+          />
+        </div>
+        <div>
+          <div>
+            <label for="email">Email</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="input your email"
+              required
+            />
+          </div>
+          <div>
+            <label for="date">Date</label>
+            <input
+              type="date"
+              name="email"
+              id="date"
+              placeholder="select date"
+              required
+            />
+          </div>
+        </div>
+        <div>
+          <label for="message">Message</label>
+          <textarea name="message" id="message"></textarea>
+        </div>
+        <input type="submit" value="Send Message" />
+      </form>
+    </section>
+
+    <footer>
+      <p>Copyright Pebisnis Ulung. All right reserved</p>
       <ul>
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
-        <li><a href="#serivces">Services</a></li>
-        <li><a href="#clients">Our clients</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#clients">Clients</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-      <button>
-        Let's talk
-      </button>
-    </header>
+      <picture>
+        <img src="./assets/icons/instagram.svg" alt="facebook" />
+        <img src="./assets/icons/facebook.svg" alt="instagram" />
+        <img src="./assets/icons/in.svg" alt="facebook" />
+      </picture>
+    </footer>
   </body>
 </html>
