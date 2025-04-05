@@ -21,9 +21,27 @@
         </ul>
       </nav>
       <button>Let's talk</button>
-      <button class="barMenu" aria-label="Toggle menu">
+      <button class="barMenu" aria-label="Toggle menu" id="barMenu">
         <img src="./assets/icons/menu.png" alt="bar menu" width="30px" />
       </button>
+      <div class="menuContainer">
+        <div class="overlay" id="overlay"></div>
+        <div class="menu" id="menu">
+          <img
+            class="closeMenu"
+            src="./assets/icons/close.png"
+            alt="close"
+            width="30px"
+          />
+          <ul>
+            <li><a class="closeMenu" href="#home">Home</a></li>
+            <li><a class="closeMenu" href="#about">About</a></li>
+            <li><a class="closeMenu" href="#services">Services</a></li>
+            <li><a class="closeMenu" href="#clients">Clients</a></li>
+            <li><a class="closeMenu" href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
     </header>
 
     <section class="heroSection" id="home">

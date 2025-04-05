@@ -30,18 +30,18 @@ header {
   padding: 15px 30px;
 }
 
-header ul {
+header >nav > ul {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 50px;
 }
-header ul li {
+header nav ul li {
   font-size: 16px;
   font-weight: 500;
 }
 
-header button:first-of-type {
+header > button:first-of-type {
   background: none;
   border: 1px solid var(--primary-color);
   border-radius: 30px;
@@ -51,19 +51,72 @@ header button:first-of-type {
   font-size: 16px;
   text-wrap: none;
 }
-header button:first-of-type:hover {
+header > button:first-of-type:hover {
   border: 1px solid var(--secondary-color);
   background-color: var(--primary-color);
 }
-header button:last-of-type {
+header > button:last-of-type {
   background: none;
   border: none;
   cursor: pointer;
+  display: none;
 }
 
 .barMenu {
   display: none;
 }
+
+/*menuContainer*/
+.menuContainer{
+  display: none;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 100;
+  display: none;
+}
+#menu{
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  width: 80%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transform: translateX(-100%);
+  transition: all 0.5s;
+  z-index: 101;
+
+}
+.closeMenu {
+ 
+  align-self: flex-end;
+  cursor: pointer;
+  margin: 30px;
+
+}
+.menu > ul{
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  margin-right: 30px;
+  gap: 20px;
+}
+.menu ul li{
+  border-bottom: 1px solid var(--primary-color);
+}
+.menu ul li {
+  font-size: 18PX;
+}
+
 /*Hero section*/
 
 .heroSection {
@@ -383,7 +436,7 @@ footer {
   background-size: cover;
 }
 footer > p:first-child {
-  color: white; 
+  color: white;
 }
 footer ul {
   display: flex;
@@ -433,11 +486,15 @@ footer ul li a:hover {
 }
 
 @media (max-width: 900px) {
-  header ul {
+
+  header > nav  {
     display: none;
   }
-  header button {
+  header > button:first-of-type {
     display: none;
+  }
+  header > button:last-of-type {
+    display: block;
   }
   .brands img {
     width: 150px;
@@ -464,7 +521,6 @@ footer ul li a:hover {
     flex-wrap: wrap-reverse;
     justify-content: center;
     align-items: center;
-
   }
   .contact > form:last-child {
     width: 100%;
@@ -474,7 +530,7 @@ footer ul li a:hover {
   }
   footer > p:first-child {
     color: white;
-    text-align: center; 
+    text-align: center;
   }
 }
 
