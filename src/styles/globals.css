@@ -30,7 +30,7 @@ header {
   padding: 15px 30px;
 }
 
-header >nav > ul {
+header > nav > ul {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -41,7 +41,7 @@ header nav ul li {
   font-weight: 500;
 }
 
-header > button:first-of-type {
+header > button:first-of-type , .letsTalk {
   background: none;
   border: 1px solid var(--primary-color);
   border-radius: 30px;
@@ -50,8 +50,9 @@ header > button:first-of-type {
   font-weight: 500;
   font-size: 16px;
   text-wrap: none;
+  margin: 30px;
 }
-header > button:first-of-type:hover {
+header > button:first-of-type:hover, .letsTalk:hover {
   border: 1px solid var(--secondary-color);
   background-color: var(--primary-color);
 }
@@ -61,13 +62,16 @@ header > button:last-of-type {
   cursor: pointer;
   display: none;
 }
+.socialIcons{
+  align-self: center;
+}
 
 .barMenu {
   display: none;
 }
 
 /*menuContainer*/
-.menuContainer{
+.menuContainer {
   display: none;
 }
 .overlay {
@@ -80,7 +84,7 @@ header > button:last-of-type {
   z-index: 100;
   display: none;
 }
-#menu{
+#menu {
   background-color: white;
   position: fixed;
   top: 0;
@@ -94,27 +98,29 @@ header > button:last-of-type {
   transform: translateX(-100%);
   transition: all 0.5s;
   z-index: 101;
-
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 .closeMenu {
- 
   align-self: flex-end;
   cursor: pointer;
-  margin: 30px;
+  margin-top: 30px;
+  margin-right: 30px;
 
 }
-.menu > ul{
+.menu > ul {
   display: flex;
   flex-direction: column;
   text-align: start;
   margin-right: 30px;
   gap: 20px;
 }
-.menu ul li{
+.menu ul li {
   border-bottom: 1px solid var(--primary-color);
 }
 .menu ul li {
-  font-size: 18PX;
+  font-size: 18px;
 }
 
 /*Hero section*/
@@ -127,7 +133,7 @@ header > button:last-of-type {
   background: url("../assets/images/hero-bg.png");
   background-position: center center;
   background-size: cover;
-  padding: 30px;
+  padding: 60px 30px;
 }
 .heroSection div:first-child {
   max-width: 800px;
@@ -239,7 +245,7 @@ header > button:last-of-type {
   gap: 20px;
   flex-wrap: wrap;
 }
-.services > div:last-child div {
+.services > div:last-child > div {
   background-color: rgb(251, 251, 251);
   border-radius: 30px;
   padding: 20px;
@@ -248,7 +254,6 @@ header > button:last-of-type {
   flex-direction: column;
   gap: 10px;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
-  flex-grow: 1;
   border: 1px solid var(--primary-color);
 }
 .services > div:last-child div:hover {
@@ -269,7 +274,7 @@ header > button:last-of-type {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 30px;
+  padding: 60px 30px;
 }
 .whyUs div:last-child {
   display: flex;
@@ -322,13 +327,13 @@ header > button:last-of-type {
 .reviews > div:first-child p {
   color: var(--primary-color);
   font-weight: 500;
-  padding: 30px;
+  padding: 0 30px;
 }
 .reviews > div:first-child h3 {
   color: var(--link-color);
   font-weight: 700;
   font-size: 30px;
-  padding: 30px;
+  padding: 0 30px;
 }
 .reviews > div:last-child {
   background: url("../assets/images/reviews-bg.png");
@@ -486,8 +491,7 @@ footer ul li a:hover {
 }
 
 @media (max-width: 900px) {
-
-  header > nav  {
+  header > nav {
     display: none;
   }
   header > button:first-of-type {
@@ -531,6 +535,10 @@ footer ul li a:hover {
   footer > p:first-child {
     color: white;
     text-align: center;
+  }
+
+  .services > div:last-child > div {
+    max-width: 100%;
   }
 }
 
