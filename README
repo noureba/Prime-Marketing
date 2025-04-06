@@ -1,0 +1,30 @@
+# Prime Marketing
+
+Prime Marketing is a digital marketing solution platform aimed at helping businesses improve their online presence. The platform offers services such as SEO, web development, and digital advertising strategies.
+
+## Features
+
+- **SEO Services**: Improve your website’s search engine ranking.
+- **Web Development**: Build responsive, user-friendly websites.
+- **Digital Advertising**: Boost online visibility through targeted ads and campaigns.
+- **Analytics**: Track performance metrics and results of marketing campaigns.
+
+## Technologies Used
+
+- **Frontend**: 
+  - HTML
+  - CSS (via Tailwind CSS or custom styles)
+  - JavaScript (React)
+  - Webpack
+
+- **Development Tools**:
+  - Webpack
+  - ESLint (for linting)
+
+## Installation
+
+### Prerequisites
+
+- Node.js (v14 or later)
+- Git
+
