@@ -504,6 +504,7 @@ footer ul li a:hover {
   border-radius: 100%;
   padding: 10px;
   display: none;
+  cursor: pointer;
 }
 
 @media (max-width: 900px) {

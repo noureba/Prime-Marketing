@@ -30,9 +30,38 @@ window.addEventListener("scroll", () => {
     header.style.transition = "header 1s ease-in-out";
     scrollTopBtn.style.display = "block";
     scrollTopBtn.style.transition = "scrollTopBtn 1s ease-in-out";
-  }else{
+  } else {
     header.style.position = "static";
     scrollTopBtn.style.display = "none";
-
   }
+});
+
+// send email
+const fullName = document.querySelector("input[name='fullName']");
+const email = document.querySelector("input[name='email']");
+const date = document.querySelector("input[name='date']");
+const message = document.querySelector("textarea[name='message']");
+const sendBtn = document.querySelector(".sendBtn");
+
+sendBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  const fullNameValue = fullName.value;
+  const emailValue = email.value;
+  const dateValue = date.value;
+  const messageValue = message.value;
+
+  const formData = {
+    fullName: fullNameValue,
+    email: emailValue,
+    date: dateValue,
+    message: messageValue,
+  };
+
+  fetch("https://exemaple.com", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(formData),
+  });
 });
